@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+   width: 100%;
+   margin: 0;
+   padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* Small mobile phones */
+@media screen and  (min-width: 310px ) and (max-width: 450px ){
+
+}
+
+
+/* Tablets and devices of the sort */
+@media screen and  (min-width: 450px ) and (max-width: 990px ){
+
+}
+
+.maincontainer{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    text-align: center;
+    
+}
+
+.innermaincontainer{
+    
+}
+
+.mainheadingtxt{
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 25px;
+}
+
+.smallheadingtxt{
+    font-size: medium;
+    font-weight: 200;
+    font-family: sans-serif;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.linkscontainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.twolinks1{
+  
+    /* outline: none; */
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: blue;
+    /* margin-left: 15px; */
+    /* margin-right: 15px; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.twolinks2{
+    display: inline;
+    /* outline: none; */
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: orange;
+    color: white;
+    /* margin-left: 15px; */
+    /* margin-right: 15px; */
+    border-radius: 10px;
+    margin-right: 15px;
+    margin-top: 15px;
+}
