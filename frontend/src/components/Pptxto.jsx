@@ -11,7 +11,7 @@ export default function Pptxto() {
     const [error,setError] = useState("")
     const [downloadLink, setDownloadLink] = useState("");
 
-    
+    const navigaateto = useNavigate();
 
     function navigatetohome() {
         navigaateto(-1)
