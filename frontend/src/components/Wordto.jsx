@@ -5,7 +5,7 @@ export default function Wordto() {
 
     const [file ,setFile] = useState(null)
     const [isLoading, setIsLoading] = useState(false);
-    const [error,seterror] = useState("")
+    const [error,setError] = useState("")
 
     function handleuploadedfile(e) {
         setFile(e.target.files[0])   
