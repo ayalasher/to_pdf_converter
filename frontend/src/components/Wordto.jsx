@@ -16,17 +16,28 @@ export default function Wordto() {
           setError('Please upload a .docx file.');
           return;
         }
+        console.log("inside handle upload function");
+        console.log("file to upload is " , file );
+        
+        
     
         setError('');
         setIsLoading(true);
-    
+        
         try {
           const formData = new FormData();
           formData.append('file', file);
-    
-          const response = await axios.post('http://localhost:3000/convert', formData, {
+
+          console.log("before axios operation");
+          
+          const response = await axios.post('http://localhost:3000/convert/', formData , {
+            headers: { 'Content-Type': 'multipart/form-data' },
             responseType: 'blob', // Important to handle binary files
-          });
+          }); 
+          console.log("after axios operation");
+          
+          console.log(response.data);
+          
     
           // Create a download link for the converted PDF
           const url = window.URL.createObjectURL(new Blob([response.data]));
@@ -36,6 +47,8 @@ export default function Wordto() {
           document.body.appendChild(link);
           link.click();
           link.parentNode.removeChild(link);
+          console.log("after creating a download link");
+          
         } catch (err) {
           console.error(err);
           setError('An error occurred while converting the file.');
@@ -53,12 +66,13 @@ export default function Wordto() {
             <p className={styles.mainheadingtxt} >Choose word document to upload for conversion</p>     
             </div>
         <div className={styles.labelandinput} >
-        <label className={styles.labeltxt} htmlFor="document upload">Document upload</label> <br />
+        <label className={styles.labeltxt} htmlFor="document upload">Document upload.</label> <br />
+        <label className={styles.labeltxt} htmlFor="document upload">The converted doc is going to be automatically downloaded .</label> <br />
         <input className={styles.input} type="file" accept=".docx" onChange={handleuploadedfile} />  <br />
         </div>
 
         <div className={styles.btnanderror} >
-        <button className={styles.convertbtn} onClick={handleUpload} disabled={isLoading}>
+        <button className={styles.convertbtn} onClick={handleUpload} disabled={isLoading} >
         {isLoading ? 'Converting...' : 'Convert to PDF'}
       </button>
       {error && <p style={{ color: 'red' }}>{error}</p>}

@@ -104,6 +104,18 @@ body {
     margin: 25px;
 }
 
+
+.convertbtn2{
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: orange ;
+    padding-top: 8px ;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    outline: none;
+    margin: 25px;
+}
+
 .wordmaindiv{
     /* display: flex;
     align-items: center;
