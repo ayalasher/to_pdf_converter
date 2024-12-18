@@ -1,11 +1,20 @@
 import { useState } from "react"
 import axios from "axios"
 import styles from "./styles.module.css"
+import { useNavigate } from "react-router-dom"
+
+
 export default function Wordto() {
 
     const [file ,setFile] = useState(null)
     const [isLoading, setIsLoading] = useState(false);
     const [error,setError] = useState("")
+
+    const navigaateto = useNavigate();
+
+    function navigatetohome() {
+        navigaateto(-1)
+    }
 
     function handleuploadedfile(e) {
         setFile(e.target.files[0])   
@@ -74,7 +83,8 @@ export default function Wordto() {
         <div className={styles.btnanderror} >
         <button className={styles.convertbtn} onClick={handleUpload} disabled={isLoading} >
         {isLoading ? 'Converting...' : 'Convert to PDF'}
-      </button>
+      </button><br />
+      <button onClick={navigatetohome} className={styles.homebtn} >Home</button>
       {error && <p style={{ color: 'red' }}>{error}</p>}
         </div>
             </div>

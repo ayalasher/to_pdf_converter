@@ -96,7 +96,7 @@ body {
 .convertbtn{
     padding-left: 16px;
     padding-right: 16px;
-    background-color: rgb(139, 139, 235);
+    background-color: lightblue;
     padding-top: 8px ;
     padding-bottom: 8px;
     border-radius: 10px;
@@ -149,6 +149,7 @@ body {
 .btnanderror{
     margin-top: 40px;
     margin-bottom: 40px;
+    display: block;
 }
 
 .input{
@@ -159,4 +160,17 @@ body {
     margin: 25px;
     background-color: grey;
     border-radius: 7px;
+}
+
+
+.homebtn{
+    outline: none;
+    background-color: black;
+    color: white;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 10px;
+    text-decoration: none;
 }
